@@ -47,6 +47,16 @@
 			<groupId>org.apache.camel.springboot</groupId>
 			<artifactId>camel-stream-starter</artifactId>
 		</dependency>
+		<!-- include camel developer console -->
+		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-console-starter</artifactId>
+		</dependency>
+		<!-- include JMX that allows additional information in camel developer console -->
+		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-management-starter</artifactId>
+		</dependency>
 
 		<!-- test -->
 		<dependency>
