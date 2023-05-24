@@ -15,7 +15,7 @@ public class TimerRoute extends RouteBuilder {
     @Override
     public void configure() throws Exception {
         // start from a timer
-        from("timer:hello?period={{myPeriod}}").routeId("hello")
+        from("timer:hello?period={{app.timer.period}}").routeId("hello")
                 // and call the bean
                 .bean(greeter, "greet")
                 // and print it to system out via stream component

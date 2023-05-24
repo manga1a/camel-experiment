@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component("greeter")
 public class Greeter {
     private int counter;
-    @Value("${greeting}")
+    @Value("${app.timer.greeting}")
     private String say;
 
     public String greet(String body) {
