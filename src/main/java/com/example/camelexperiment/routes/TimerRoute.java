@@ -4,7 +4,7 @@ import com.example.camelexperiment.beans.Greeter;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class TimerRoute extends RouteBuilder {
     private final Greeter greeter;
 
