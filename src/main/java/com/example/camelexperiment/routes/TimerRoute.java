@@ -4,7 +4,7 @@ import com.example.camelexperiment.beans.Greeter;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class TimerRoute extends RouteBuilder {
     private final Greeter greeter;
 
@@ -18,7 +18,8 @@ public class TimerRoute extends RouteBuilder {
         from("timer:hello?period={{app.timer.period}}").routeId("hello")
                 // and call the bean
                 .bean(greeter, "greet")
-                // and print it to system out via stream component
-                .to("stream:out");
+                .log("***** body: ${body}")
+                .to("vertx-http:http://{{app.b2be.url}}")
+                .log("***** body: ${body}");
     }
 }
